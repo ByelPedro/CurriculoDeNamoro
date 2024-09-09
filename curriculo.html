@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Gabryel J. Pedro</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="heart-container"></div> <!-- Contêiner dos corações flutuantes -->
+    <div class="container">
+        <!-- Cabeçalho do currículo -->
+        <div class="header">
+            <img src="image/eu.jpg" alt="Gabryel J. Pedro">
+            <h1><strong>Gabryel J. Pedro</strong></h1>
+            <p>21 Anos • Desenvolvedor de Software<p>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/_gabryelp/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/intl-pt/track/3PlKQNlbL4767rND3HnqSI?si=41c443e713e8415c"
+                target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+
+        <!-- Informações principais -->
+        <div class="curriculo-info">
+            <div>
+                <p><strong>Cursando: </strong>Sistemas da Informação - Unisul PB</p>
+                <p><strong>Artista Favorito: </strong> Felp22 - Cacife Clandestino</p>
+            </div>
+            <div>
+                <p><strong>Signo: </strong>Peixes</p>
+                <p><strong>Altura: </strong>1.81</p>
+            </div>
+        </div>
+
+        <!-- Objetivos -->
+        <div class="objetivos">
+            <h2>Objetivos</h2>
+            <p>Procuro alguém para ser minha conchinha maior, porque também curto aquele abraço que faz a gente se
+                sentir seguro <br> (sim, homem também gosta!). Quero uma parceria para dividir bons momentos na praia,
+                acampar sob as estrelas, treinar juntos e curtir várias outras aventuras. Se quiser algo sério,
+                show, tô dentro! Mas se quiser só me usar como um objeto, também aceito bem conversado, ninguém sai
+                machucado.</p>
+                <hr class="styled-line">
+        </div>
+
+        <!-- Pontos Positivos -->
+        <div class="pt-positivos">
+            <h2>Pontos Positivos</h2>
+            <p>
+                <li><strong>Treino de Segunda a Sábado:</strong> Domingo é descanso, afinal, até Deus, que é O da porra toda, descansou no sétimo dia.</li>
+                <li><strong>Cozinho bem:</strong> Desenvolvo legal na cozinha, então fome você não vai passar.</li>
+                <li><strong>Atividades ao Ar Livre:</strong> Amo andar de skate, surfar, fazer trilhas, entre outras aventuras.</li>
+                <li><strong>Beleza Mediana:</strong> Não sou galã, mas você não passará vergonha.</li>
+                <li><strong>Humor Peculiar:</strong> Engraçado, mas meu humor pode confundir.</li>
+                <li><strong>Bebo Socialmente:</strong> Nunca chego ao ponto de dar PT.</li>
+                <li><strong>Habilidades de TI e afins:</strong> Sei arrumar seu PC, trocar chuveiro, pintar paredes, etc.</li>
+                <li><strong>Dançarino da Cadeira:</strong> Danço na moral e nada de ser "duro" no baile.</li>
+                <hr class="styled-line">
+
+            <p>
+        </div>
+
+        <!-- Pontos Negativos -->
+        <div class="pt-negativos">
+            <h2>Pontos Negativos</h2>
+            <p>
+                <li><strong>Bagunceiro:</strong> Quarto sempre uma bagunça.</li>
+                <li><strong>Ronco:</strong> Por conta da asma, ronco durante o sono.</li>
+                <li><strong>Distraído:</strong> Esqueço rápido o que me falam.</li>
+                <hr class="styled-line">
+            </p>
+        </div>
+
+        <!-- Mensagem Final -->
+        <div class="final">
+            
+                <h2>Se você chegou até aqui, parabéns!</h2>
+                <li><strong>Você é uma maluca por ler um currículo desses. </strong> Porém eu gosto de gente maluca me chama para combinarmos um . Prometo que não sou tão esquisito... pelo menos não tanto.</li>
+            
+        </div>
+        <div class="box">
+            <p>Você aceita sair para um date comigo?</p>
+            <div class="button-container">
+                <button>
+                    <a id="yes">Sim</a>
+                </button>
+                <button id="no">Não</button>
+            </div>
+        </div>
+
+        <!-- Script do botão "Não" -->
+        <script>
+            let button = document.getElementById('no');
+            let box = document.querySelector('.box'); // Seleciona a div .box
+
+            button.addEventListener('mouseover', function () {
+                let boxRect = box.getBoundingClientRect(); // Pega as dimensões da div .box
+                let buttonRect = button.getBoundingClientRect(); // Pega as dimensões do botão
+
+                let height = boxRect.height - buttonRect.height; // Altura disponível dentro da .box
+                let width = boxRect.width - buttonRect.width; // Largura disponível dentro da .box
+
+                // Calcula novas posições aleatórias dentro da .box
+                let newTop = Math.random() * height;
+                let newLeft = Math.random() * width;
+
+                button.style.position = 'absolute';
+                button.style.top = newTop + 'px';
+                button.style.left = newLeft + 'px';
+            });
+        </script>
+
+        <!-- Script dos corações flutuantes -->
+        <script>
+            function createHeart() {
+                const heartContainer = document.querySelector('.heart-container');
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + 'vw'; // Posição aleatória horizontal
+                heart.style.animationDuration = Math.random() * 3 + 3 + 's'; // Duração aleatória da animação
+                heart.style.opacity = Math.random(); // Opacidade aleatória
+                heartContainer.appendChild(heart);
+
+                // Remover o coração após a animação
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000); // Tempo de vida dos corações
+            }
+
+            // Gerar corações a cada 300ms
+            setInterval(createHeart, 300);
+        </script>
+
+        <script>
+            document.getElementById('yes').addEventListener('click', function () {
+                // URL para abrir o Instagram e tentar direcionar para a DM
+                let instaUrl = 'https://www.instagram.com/_gabryelp/?message=Quero%20marcar%20um%20date%20com%20você';
+
+                // Redireciona para o Instagram
+                window.open(instaUrl, '_blank');
+            });
+        </script>
+    </div>
+</body>
+
+</html>
